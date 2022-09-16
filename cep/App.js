@@ -1,11 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+//import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import cep from './assets/cep_fundo.png';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.mainView}>
+      <View style={styles.container}>
+        <Image source={cep} defaultSource={cep} style={styles.cepinicial}></Image>
+        <Text style={styles.appName}> CEP DOS CORREIOS </Text>
+        <Text>O App de CEP dos Correios</Text>
+      </View>
     </View>
   );
 }
@@ -13,8 +17,21 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#1E90FF',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  appName: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: '#c0c0f0',
+  },
+  cepinicial: {
+    width: 300,
+    height: 300
+  },
+  mainView: {
+    flex:1,
+    backgroundColor: '#000000'
+  }
 });
