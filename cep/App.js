@@ -9,6 +9,12 @@ export default function App() {
         <Image source={cep} defaultSource={cep} style={styles.cepinicial}></Image>
         <Text style={styles.appName}> CEP DOS CORREIOS </Text>
         <Text>O App de CEP dos Correios</Text>
+        <Text>Aqui aonde você encontra tudo </Text>
+        <button onclick="app2.js" imported = 'app2.js'>RESTEAMENTO CEP
+        {
+          window.location.replace("app2.js")
+        }
+        </button>
       </View>
     </View>
   );
